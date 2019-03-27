@@ -1,0 +1,9 @@
+---
+# tasks file for docker-container
+- name: Starting container "{{ container_name }}"
+  docker_container:
+    name: "{{ container_name }}"
+    pull: "{{ pull }}"
+    image: "{{ image }}"
+    published_ports: 
+      - "{{ public_port }}"
